@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addrulepath="/administrator/components/com_profile/models/rules">
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="fullname"
+			type="text"
+			label="COM_PROFILE_PROFILE_FULLNAME_LABEL"
+			description="COM_PROFILE_PROFILE_FULLNAME_DESC"
+			size="40"
+			class="inputbox validate-fullname"
+			validate="fullname"
+			required="true"
+			default=""
+		/>		
+		<field
+		  name="avatar"
+		  type="media"
+		  label="COM_PROFILE_PROFILE_AVATAR_LABEL"
+		  description="COM_PROFILE_PROFILE_AVATAR_DESC"
+		  required="true"
+		/>
+		<field
+			name="description"
+			type="editor"
+			label="COM_PROFILE_PROFILE_DESCRIPTION_LABEL"
+			description="COM_PROFILE_PROFILE_DESCRIPTION_DESC"
+			class="inputbox"
+			required="true"
+			filter="safehtml"
+            buttons="true"
+            hide="article,readmore,pagebreak"
+		/>		
+		<field
+		  name="created_by"
+		  type="hidden"
+		  class="readonly"
+		  readonly="true"
+		  filter="unset"
+        />
+	</fieldset>
+</form>

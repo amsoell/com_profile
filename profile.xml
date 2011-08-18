@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.7.0" method="upgrade">
+	<name>COM_PROFILE</name>
+	<creationDate>July 2011</creationDate>
+	<author>Andy Soell</author>
+	<authorEmail>andy@teamsoell.com</authorEmail>
+	<authorUrl>http://andy.teamsoell.com</authorUrl>
+	<copyright>Copyright (c) 2011 The Genteel</copyright>
+	<version>1.0</version>
+	<description>COM_PROFILE_DESCRIPTION</description>
+ 
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+ 
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>profile.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+	</files>
+ 
+	<administration>
+		<menu>COM_PROFILE_MENU</menu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>profile.php</filename>
+			<filename>controller.php</filename>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>controllers</folder>
+		</files>		
+		<languages folder="admin">
+		  <language tag="en-GB">language/en-GB/en-GB.com_profile.ini</language>
+		  <language tag="en-GB">language/en-GB/en-GB.com_profile.sys.ini</language>
+        </languages>
+	</administration>
+</extension>
